@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Residency | The Highway Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Outfit:wght@400;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --accent: #f43f5e;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .font-heading { font-family: 'Space Grotesk', sans-serif; }
+        
+        /* Custom Smooth Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #818cf8, #f43f5e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-zoom {
+            animation: slowZoom 20s infinite alternate;
+        }
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .btn-hover:hover {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-[100] p-6">
+        <div class="max-w-6xl mx-auto glass rounded-2xl px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter uppercase">Ajay<span class="text-indigo-500">.</span>Res</div>
+            <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest">
+                <a href="#about" class="hover:text-indigo-400 transition">About</a>
+                <a href="#rooms" class="hover:text-indigo-400 transition">Rooms</a>
+                <a href="#amenities" class="hover:text-indigo-400 transition">Vibes</a>
+            </div>
+            <a href="https://www.hotelajayresidency.in/" target="_blank" class="bg-indigo-600 px-6 py-2 rounded-full text-xs font-bold btn-hover transition-all">BOOK NOW</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070" class="w-full h-full object-cover hero-zoom opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-[#0a0a0a]"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4" data-aos="zoom-out" data-aos-duration="1500">
+            <h1 class="text-6xl md:text-9xl font-heading font-extrabold tracking-tighter mb-4 leading-none">
+                GURGAON <br> <span class="text-gradient">REDEFINED.</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-xl mx-auto mb-8 font-light italic">
+                Economy price. Luxury feel. Right on the NH-8 pulse.
+            </p>
+            <div class="flex justify-center gap-4">
+                <div class="w-1 h-12 bg-indigo-500 animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">THE HUB OF <br>CONNECTIVITY.</h2>
+                <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                    Opposite Haldiram's, right at the Kherki Daula Toll. Whether you're chasing corporate deals in Gurgaon or cruising the Golden Triangle to Jaipur, we are your strategic pitstop.
+                </p>
+                <ul class="space-y-4 font-bold text-indigo-400">
+                    <li class="flex items-center gap-2"><span>→</span> 15 Mins from Airport</li>
+                    <li class="flex items-center gap-2"><span>→</span> Heart of Corporate Sector</li>
+                    <li class="flex items-center gap-2"><span>→</span> Highway Access (NH-8)</li>
+                </ul>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <div class="absolute -inset-4 bg-indigo-600/20 blur-3xl rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1000" class="relative rounded-3xl grayscale hover:grayscale-0 transition duration-700 shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="rooms" class="py-32 bg-[#111] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-16">
+            <h2 class="text-5xl md:text-7xl font-black tracking-tighter italic" data-aos="fade-up">STAY IN STYLE.</h2>
+        </div>
+        
+        <div class="flex flex-wrap md:flex-nowrap gap-8 px-6 max-w-7xl mx-auto">
+            <div class="w-full md:w-1/3 glass p-4 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-80 rounded-2xl overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Special Suite</h3>
+                <p class="text-gray-400 text-sm mb-6">The ultimate highway sanctuary with premium aesthetics.</p>
+                <div class="flex justify-between items-center border-t border-white/10 pt-4">
+                    <span class="font-bold text-xl">Top Tier</span>
+                    <button class="text-xs uppercase tracking-widest font-black text-indigo-400">View Details</button>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/3 glass p-4 rounded-[2rem]" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-80 rounded-2xl overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Executive Deluxe</h3>
+                <p class="text-gray-400 text-sm mb-6">Perfect for the digital nomad. Fast Wi-Fi, zero noise.</p>
+                <div class="flex justify-between items-center border-t border-white/10 pt-4">
+                    <span class="font-bold text-xl">Pro Choice</span>
+                    <button class="text-xs uppercase tracking-widest font-black text-indigo-400">View Details</button>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/3 glass p-4 rounded-[2rem]" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-80 rounded-2xl overflow-hidden mb-6">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Standard Room</h3>
+                <p class="text-gray-400 text-sm mb-6">Minimalist, clean, and exactly what you need.</p>
+                <div class="flex justify-between items-center border-t border-white/10 pt-4">
+                    <span class="font-bold text-xl">Best Value</span>
+                    <button class="text-xs uppercase tracking-widest font-black text-indigo-400">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="py-32 px-6 bg-black">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 border-b border-white/10 pb-20 mb-20">
+                <div data-aos="zoom-in">
+                    <span class="text-indigo-500 font-black tracking-widest text-xs uppercase">The Essentials</span>
+                    <h2 class="text-5xl font-bold mt-4 mb-8">NO CAP, <br>WE GOT IT ALL.</h2>
+                </div>
+                <div class="grid grid-cols-2 gap-8" data-aos="fade-up">
+                    <div>
+                        <div class="text-3xl mb-2">🍳</div>
+                        <h4 class="font-bold">Dine-in</h4>
+                        <p class="text-gray-500 text-xs">24/7 Flavors</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">📶</div>
+                        <h4 class="font-bold">Ultra Wi-Fi</h4>
+                        <p class="text-gray-500 text-xs">High Speed</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">🅿️</div>
+                        <h4 class="font-bold">Secured</h4>
+                        <p class="text-gray-500 text-xs">Valet & CCTV</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-2">🧼</div>
+                        <h4 class="font-bold">Pristine</h4>
+                        <p class="text-gray-500 text-xs">Daily Refresh</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 px-6 bg-[#0a0a0a] border-t border-white/5">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+            <div>
+                <div class="text-3xl font-black mb-6">AJAY<span class="text-indigo-500">.</span>RESIDENCY</div>
+                <p class="text-gray-500 max-w-sm">NH-8, Kherki Daula, Gurgaon, India. Your journey deserves a better stop.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-16">
+                <div>
+                    <h5 class="font-bold mb-4 uppercase text-xs tracking-widest text-indigo-400">Contact</h5>
+                    <p class="text-gray-400 text-sm italic">ajayresidency@gmail.com</p>
+                    <p class="text-gray-400 text-sm">+91-124-2214062</p>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4 uppercase text-xs tracking-widest text-indigo-400">Social</h5>
+                    <div class="flex gap-4">
+                        <a href="#" class="hover:text-indigo-400">IG</a>
+                        <a href="#" class="hover:text-indigo-400">FB</a>
+                        <a href="#" class="hover:text-indigo-400">TW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-20 text-[10px] text-gray-600 uppercase tracking-[0.5em]">
+            &copy; 2026 AJAY RESIDENCY — ALL RIGHTS RESERVED
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true
+        });
+    </script>
+</body>
+</html>
