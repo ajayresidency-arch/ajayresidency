@@ -9,6 +9,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Outfit:wght@400;800&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --primary: #6366f1;
+            --accent: #f43f5e;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        .font-heading { font-family: 'Space Grotesk', sans-serif; }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #818cf8, #f43f5e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-zoom {
+            animation: slowZoom 20s infinite alternate;
+        }
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .btn-hover:hover {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.1);
+            transform: rotate(45deg);
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        .shine-effect:hover::after {
+            left: 120%;
+        }
 
         /* Subtle Pulse for Nav Button */
         @keyframes softPulse {
@@ -73,7 +134,7 @@
             </div>
             <div class="relative" data-aos="fade-left">
                 <div class="absolute -inset-4 bg-indigo-600/20 blur-3xl rounded-full"></div>
-                <img src="https://i.ibb.co/vx64csbT/Whats-App-Image-2026-05-20-at-10-10-04-PM-1.jpg" class="relative rounded-3xl grayscale hover:grayscale-0 transition duration-700 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1000" class="relative rounded-3xl grayscale hover:grayscale-0 transition duration-700 shadow-2xl">
             </div>
         </div>
     </section>
