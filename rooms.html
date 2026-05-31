@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suites | Ajay Residency Gurgaon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Outfit:wght@400;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --primary: #6366f1; }
+        body { font-family: 'Outfit', sans-serif; background-color: #0a0a0a; color: #ffffff; }
+        .font-heading { font-family: 'Space Grotesk', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .text-gradient { background: linear-gradient(to right, #818cf8, #f43f5e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="pt-24">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-[100] p-4 md:p-6">
+        <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase">Ajay<span class="text-indigo-500">.</span>Res</a>
+            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="index.html" class="hover:text-indigo-400 transition">Home</a>
+                <a href="#amenities" class="hover:text-indigo-400 transition">Amenities</a>
+                <a href="dining.html" class="hover:text-indigo-400 transition">Dine-In</a>
+            </div>
+            <a href="tel:+918130411881" class="bg-indigo-600 px-6 py-2 rounded-full text-xs font-bold transition-all uppercase tracking-tighter">Call to Book</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="py-12 px-6 text-center" data-aos="fade-down">
+        <h1 class="text-5xl md:text-7xl font-heading font-extrabold tracking-tighter mb-4 uppercase">Your <span class="text-gradient">Sanctuary.</span></h1>
+        <p class="text-gray-400 max-w-2xl mx-auto italic font-light">Spacious rooms designed for the modern traveler. Soundproof, climate-controlled, and right on the highway.</p>
+    </header>
+
+    <!-- Detailed Room Inventory -->
+    <section class="max-w-7xl mx-auto px-6 py-12 space-y-16">
+        
+        <!-- Standard Room -->
+        <div class="grid md:grid-cols-2 gap-12 items-center glass p-8 rounded-[3rem]" data-aos="fade-right">
+            <div class="rounded-3xl overflow-hidden h-[400px]">
+                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1200" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <span class="text-indigo-500 font-black tracking-widest text-xs uppercase">Cozy & Functional</span>
+                <h2 class="text-4xl font-bold mt-2 mb-4">Standard Room</h2>
+                <p class="text-gray-400 mb-6">Equipped with 1 double bed, this 12m² space offers essential comfort with daily housekeeping and soundproofing for a peaceful night's sleep.</p>
+                <div class="grid grid-cols-2 gap-4 text-sm font-bold mb-8">
+                    <div class="flex items-center gap-2">✔ Air conditioning</div>
+                    <div class="flex items-center gap-2">✔ Shared bathroom</div>
+                    <div class="flex items-center gap-2">✔ Soundproofing</div>
+                    <div class="flex items-center gap-2">✔ Daily housekeeping</div>
+                </div>
+                <div class="flex justify-between items-center border-t border-white/10 pt-6">
+                    <span class="text-3xl font-black">₹1,800 <span class="text-sm font-normal text-gray-500">/night</span></span>
+                    <a href="tel:+918130411881" class="bg-indigo-600 px-8 py-3 rounded-xl font-bold uppercase text-xs tracking-widest">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Executive Deluxe -->
+        <div class="grid md:grid-cols-2 gap-12 items-center glass p-8 rounded-[3rem]" data-aos="fade-left">
+            <div class="md:order-2 rounded-3xl overflow-hidden h-[400px]">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200" class="w-full h-full object-cover">
+            </div>
+            <div class="md:order-1">
+                <span class="text-indigo-500 font-black tracking-widest text-xs uppercase">Business Ready</span>
+                <h2 class="text-4xl font-bold mt-2 mb-4">Executive Deluxe</h2>
+                <p class="text-gray-400 mb-6">Designed for those who need more space. Features enhanced lighting, high-speed Wi-Fi access points, and premium linens.</p>
+                <div class="grid grid-cols-2 gap-4 text-sm font-bold mb-8">
+                    <div class="flex items-center gap-2">✔ Large Window View</div>
+                    <div class="flex items-center gap-2">✔ Private Entrance</div>
+                    <div class="flex items-center gap-2">✔ Desk Workspace</div>
+                    <div class="flex items-center gap-2">✔ Fan & AC</div>
+                </div>
+                <div class="flex justify-between items-center border-t border-white/10 pt-6">
+                    <span class="text-3xl font-black">₹2,000 <span class="text-sm font-normal text-gray-500">/night</span></span>
+                    <a href="tel:+918130411881" class="bg-indigo-600 px-8 py-3 rounded-xl font-bold uppercase text-xs tracking-widest">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Suite -->
+        <div class="grid md:grid-cols-2 gap-12 items-center glass p-8 rounded-[3rem]" data-aos="fade-right">
+            <div class="rounded-3xl overflow-hidden h-[400px]">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1200" class="w-full h-full object-cover">
+            </div>
+            <div>
+                <span class="text-indigo-500 font-black tracking-widest text-xs uppercase">Premium Luxury</span>
+                <h2 class="text-4xl font-bold mt-2 mb-4">Special Suite</h2>
+                <p class="text-gray-400 mb-6">Our most prestigious accommodation. Includes premium toiletries, the best view in the residency, and a private entrance for total exclusivity.</p>
+                <div class="grid grid-cols-2 gap-4 text-sm font-bold mb-8">
+                    <div class="flex items-center gap-2">✔ Best High-Floor View</div>
+                    <div class="flex items-center gap-2">✔ Premium Toiletries</div>
+                    <div class="flex items-center gap-2">✔ Soundproofing+</div>
+                    <div class="flex items-center gap-2">✔ Closet Storage</div>
+                </div>
+                <div class="flex justify-between items-center border-t border-white/10 pt-6">
+                    <span class="text-3xl font-black">₹3,400 <span class="text-sm font-normal text-gray-500">/night</span></span>
+                    <a href="tel:+918130411881" class="bg-indigo-600 px-8 py-3 rounded-xl font-bold uppercase text-xs tracking-widest">Book Now</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Amenities Grid from Agoda Data -->
+    <section id="amenities" class="py-24 bg-[#0a0a0a]">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-black italic mb-12" data-aos="fade-up">ROOM PERKS.</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="glass p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-3xl mb-4">❄️</div>
+                    <h4 class="font-bold">Air conditioning</h4>
+                    <p class="text-gray-500 text-xs">Climate Control</p>
+                </div>
+                <div class="glass p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-3xl mb-4">🔇</div>
+                    <h4 class="font-bold">Soundproofing</h4>
+                    <p class="text-gray-500 text-xs">Zero Noise</p>
+                </div>
+                <div class="glass p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-3xl mb-4">🔑</div>
+                    <h4 class="font-bold">Private entrance</h4>
+                    <p class="text-gray-500 text-xs">Secure Access</p>
+                </div>
+                <div class="glass p-6 rounded-2xl" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-3xl mb-4">🧴</div>
+                    <h4 class="font-bold">Toiletries</h4>
+                    <p class="text-gray-500 text-xs">Essentials Provided</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center border-t border-white/5">
+        <p class="text-xs text-gray-600 tracking-widest uppercase">&copy; 2026 AJAY RESIDENCY — GURGAON</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800 });</script>
+</body>
+</html>
