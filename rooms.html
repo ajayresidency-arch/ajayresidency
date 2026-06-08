@@ -14,11 +14,14 @@
         .font-heading { font-family: 'Space Grotesk', sans-serif; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .text-gradient { background: linear-gradient(to right, #818cf8, #f43f5e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Smooth fade transitions for the carousel */
+        .carousel-item { opacity: 0; transition: opacity 0.8s ease-in-out; position: absolute; inset: 0; }
+        .carousel-item.active { opacity: 1; position: relative; }
     </style>
 </head>
 <body class="pt-24">
 
-    <!-- Navigation -->
     <nav class="fixed top-0 w-full z-[100] p-4 md:p-6">
         <div class="max-w-6xl mx-auto glass rounded-2xl px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-xl md:text-2xl font-black tracking-tighter uppercase">Ajay<span class="text-indigo-500">.</span>Res</a>
@@ -31,19 +34,24 @@
         </div>
     </nav>
 
-    <!-- Header Section -->
     <header class="py-12 px-6 text-center" data-aos="fade-down">
         <h1 class="text-5xl md:text-7xl font-heading font-extrabold tracking-tighter mb-4 uppercase">Your <span class="text-gradient">Sanctuary.</span></h1>
         <p class="text-gray-400 max-w-2xl mx-auto italic font-light">Spacious rooms designed for the modern traveler. Soundproof, climate-controlled, and right on the highway.</p>
     </header>
 
-    <!-- Detailed Room Inventory -->
     <section class="max-w-7xl mx-auto px-6 py-12 space-y-16">
         
-        <!-- Standard Room -->
         <div class="grid md:grid-cols-2 gap-12 items-center glass p-8 rounded-[3rem]" data-aos="fade-right">
-            <div class="rounded-3xl overflow-hidden h-[400px]">
-                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1200" class="w-full h-full object-cover">
+            <div class="carousel relative rounded-3xl overflow-hidden h-[400px]">
+                <div class="carousel-item active w-full h-full">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1200" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-item w-full h-full">
+                    <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=1200" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-item w-full h-full">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200" class="w-full h-full object-cover">
+                </div>
             </div>
             <div>
                 <span class="text-indigo-500 font-black tracking-widest text-xs uppercase">Cozy & Functional</span>
@@ -62,10 +70,17 @@
             </div>
         </div>
 
-        <!-- Executive Deluxe -->
         <div class="grid md:grid-cols-2 gap-12 items-center glass p-8 rounded-[3rem]" data-aos="fade-left">
-            <div class="md:order-2 rounded-3xl overflow-hidden h-[400px]">
-                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200" class="w-full h-full object-cover">
+            <div class="carousel md:order-2 relative rounded-3xl overflow-hidden h-[400px]">
+                <div class="carousel-item active w-full h-full">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-item w-full h-full">
+                    <img src="https://images.unsplash.com/photo-1568941159104-4c5415d42983?q=80&w=1200" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-item w-full h-full">
+                    <img src="https://images.unsplash.com/photo-1578894381163-e72c17f2d45f?q=80&w=1200" class="w-full h-full object-cover">
+                </div>
             </div>
             <div class="md:order-1">
                 <span class="text-indigo-500 font-black tracking-widest text-xs uppercase">Business Ready</span>
@@ -84,10 +99,17 @@
             </div>
         </div>
 
-        <!-- Special Suite -->
         <div class="grid md:grid-cols-2 gap-12 items-center glass p-8 rounded-[3rem]" data-aos="fade-right">
-            <div class="rounded-3xl overflow-hidden h-[400px]">
-                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=1200" class="w-full h-full object-cover">
+            <div class="carousel relative rounded-3xl overflow-hidden h-[400px]">
+                <div class="carousel-item active w-full h-full">
+                    <img src="https://i.ibb.co/mC7RJHmj/IMG-7980.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-item w-full h-full">
+                    <img src="https://i.ibb.co/Qqwpx1c/IMG-7988.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="carousel-item w-full h-full">
+                    <img src="https://i.ibb.co/1t5Byx2F/IMG-7993.jpg" class="w-full h-full object-cover">
+                </div>
             </div>
             <div>
                 <span class="text-indigo-500 font-black tracking-widest text-xs uppercase">Premium Luxury</span>
@@ -108,7 +130,6 @@
 
     </section>
 
-    <!-- Amenities Grid from Agoda Data -->
     <section id="amenities" class="py-24 bg-[#0a0a0a]">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-5xl font-black italic mb-12" data-aos="fade-up">ROOM PERKS.</h2>
@@ -137,12 +158,30 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-10 text-center border-t border-white/5">
         <p class="text-xs text-gray-600 tracking-widest uppercase">&copy; 2026 AJAY RESIDENCY — GURGAON</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800 });</script>
+    <script>
+        AOS.init({ duration: 800 });
+
+        // Logic for running all carousels independently
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const items = carousel.querySelectorAll('.carousel-item');
+            let currentIndex = 0;
+
+            setInterval(() => {
+                // Remove active status from current item
+                items[currentIndex].classList.remove('active');
+                
+                // Advance to next index loop-around style
+                currentIndex = (currentIndex + 1) % items.length;
+                
+                // Add active status to new item
+                items[currentIndex].classList.add('active');
+            }, 3000); // 3000ms = 3 seconds
+        });
+    </script>
 </body>
 </html>
