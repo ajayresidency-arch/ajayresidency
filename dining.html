@@ -68,7 +68,7 @@
         #gateway {
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
-            background: #060709;
+            background: #f5eee3;
             z-index: 10000;
             display: flex;
             flex-direction: column;
@@ -205,7 +205,7 @@
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .tab-btn:hover { color: var(--text-main); border-color: rgba(255,255,255,0.15); }
-        .tab-btn.active { background: var(--text-main); color: #000; border-color: transparent; }
+        .tab-btn.active { background: var(--text-main); color: #fff; border-color: transparent; }
         /* --- PRODUCT GRID ARRANGEMENT --- */
         .menu-wrapper { max-width: 1100px; margin: 40px auto 120px; padding: 0 20px; }
         
@@ -258,12 +258,12 @@
         }
         .btn-call { background: transparent; border-color: var(--glass-border); color: var(--text-main); }
         .btn-call:hover { background: rgba(255,255,255,0.04); }
-        .btn-order { background: var(--accent-active); color: #000; font-weight: 800; transition: background 0.5s, color 0.5s; }
+        .btn-order { background: var(--accent-active); color: #fff; font-weight: 800; transition: background 0.5s, color 0.5s; }
         .btn-order:hover { opacity: 0.9; }
         /* --- STICKY CONSOLE RESET CONSOLE --- */
         .vibe-reset-pill {
             position: fixed; bottom: 30px; right: 30px; z-index: 999;
-            background: #ffffff; color: #000000; padding: 12px 24px;
+            background: #ffffff; color: #543b31; padding: 12px 24px;
             border-radius: 50px; cursor: pointer; font-weight: 800; font-size: 0.85rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: none;
             transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -278,13 +278,13 @@
 <style id="ajay-dining-theme">
 :root{--bg-base:#f5eee3;--card-base:#fffcf7;--accent-veg:#65835f;--accent-nonveg:#9b543b;--accent-active:#75503f;--glass-border:rgba(117,80,63,.18);--text-main:#543b31;--text-muted:#7d695e;--mesh-glow:rgba(183,139,93,.14)}
 body,body.theme-veg,body.theme-nonveg{background:var(--bg-base)!important;color:var(--text-main)!important}
-body.theme-veg{--accent-active:#65835f}body.theme-nonveg{--accent-active:#9b543b}
+body.theme-veg{--bg-base:#eef3e7;--card-base:#fffcf7;--mesh-glow:rgba(101,131,95,.12);--accent-active:#65835f}body.theme-nonveg{--bg-base:#f8eee8;--card-base:#fffcf7;--mesh-glow:rgba(155,84,59,.12);--accent-active:#9b543b}
 .vector-bg-layer{opacity:.8}.floating-vector{opacity:.045}
 #gateway{background:#f5eee3!important}.gateway-title{background:linear-gradient(180deg,#543b31 40%,#b78b5d)!important;-webkit-background-clip:text!important}.gateway-subtitle{color:#7d695e}.slider-panel-container{background:rgba(255,252,247,.86);border-color:var(--glass-border);box-shadow:0 26px 55px rgba(61,41,33,.14)}.vibe-range-input{background:#e4d5c2;box-shadow:inset 0 2px 4px rgba(61,41,33,.12)}.vibe-range-input::-webkit-slider-thumb{background:#75503f;box-shadow:0 8px 18px rgba(61,41,33,.20)}
 .showcase-hero{padding-top:104px}.showcase-hero h1{background:linear-gradient(180deg,#543b31 35%,#8d6a57)!important;-webkit-background-clip:text!important}.showcase-hero p{color:#7d695e}.hero-badge{background:#fffcf7;border-color:var(--glass-border);color:#b78b5d}
 .tabs-sticky-wrapper{background:rgba(245,238,227,.94);backdrop-filter:blur(12px);border-color:var(--glass-border)}.tab-btn{background:#fffcf7;border-color:var(--glass-border);color:#7d695e}.tab-btn:hover{color:#543b31;border-color:#b78b5d}.tab-btn.active{background:#75503f;color:#fff}
 .food-card{background:#fffcf7;border-color:var(--glass-border);box-shadow:0 10px 24px rgba(61,41,33,.06);transition:transform .25s ease,box-shadow .25s ease,border-color .25s}.food-card:hover{border-color:#b78b5d;transform:translateY(-4px);box-shadow:0 20px 34px rgba(61,41,33,.13)}.food-card p,.size-pill span{color:#7d695e}.price-text{color:#543b31}.size-pill{background:#f5eee3;border-color:var(--glass-border)}.card-footer{border-color:var(--glass-border)}.btn-call{border-color:var(--glass-border);color:#543b31}.btn-call:hover{background:#f5eee3}.btn-order{background:#75503f;color:#fff}.vibe-reset-pill{background:#75503f;color:#fff;box-shadow:0 10px 28px rgba(61,41,33,.22)}
-</style></head>
+.showcase-hero:after{content:'';display:block;width:54px;height:3px;background:#b78b5d;border-radius:4px;margin:26px auto 0}.menu-wrapper{position:relative}.menu-wrapper:before{content:'CHAWLAS2 · HOTEL AJAY RESIDENCY';display:block;color:#b78b5d;font-size:.7rem;font-weight:800;letter-spacing:.22em;margin-bottom:16px}.indicator-dot{background:#fffcf7}.food-card h3{color:#543b31}</style></head>
 <body>
     <div class="vector-bg-layer" id="bg-canvas">
         <div class="mesh-glow"></div>
@@ -888,7 +888,7 @@ body.theme-veg{--accent-active:#65835f}body.theme-nonveg{--accent-active:#9b543b
             
             if (val < 50) {
                 let intensity = (50 - val) / 50; 
-                gateway.style.background = `radial-gradient(circle at 30% 50%, rgba(0, 255, 204, ${intensity * 0.4}) 0%, #060709 70%)`;
+                gateway.style.background = `radial-gradient(circle at 30% 50%, rgba(0, 255, 204, ${intensity * 0.4}) 0%, #f5eee3 70%)`;
                 labelVeg.style.opacity = 0.4 + (intensity * 0.6);
                 labelVeg.style.transform = `scale(${1 + intensity * 0.15})`;
                 labelNonVeg.style.opacity = 0.4 - (intensity * 0.3);
@@ -899,7 +899,7 @@ body.theme-veg{--accent-active:#65835f}body.theme-nonveg{--accent-active:#9b543b
                 }
             } else if (val > 50) {
                 let intensity = (val - 50) / 50;
-                gateway.style.background = `radial-gradient(circle at 70% 50%, rgba(255, 85, 0, ${intensity * 0.4}) 0%, #060709 70%)`;
+                gateway.style.background = `radial-gradient(circle at 70% 50%, rgba(255, 85, 0, ${intensity * 0.4}) 0%, #f5eee3 70%)`;
                 labelNonVeg.style.opacity = 0.4 + (intensity * 0.6);
                 labelNonVeg.style.transform = `scale(${1 + intensity * 0.15})`;
                 labelVeg.style.opacity = 0.4 - (intensity * 0.3);
@@ -909,7 +909,7 @@ body.theme-veg{--accent-active:#65835f}body.theme-nonveg{--accent-active:#9b543b
                     commitProfileMode('nonveg');
                 }
             } else {
-                gateway.style.background = "#060709";
+                gateway.style.background = "#f5eee3";
                 labelVeg.style.opacity = "0.4";
                 labelNonVeg.style.opacity = "0.4";
                 labelVeg.style.transform = "scale(1)";
@@ -972,4 +972,8 @@ body.theme-veg{--accent-active:#65835f}body.theme-nonveg{--accent-active:#9b543b
     </script>
 </body>
 </html>
+
+
+
+
 
