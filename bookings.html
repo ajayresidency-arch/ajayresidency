@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Book Hotel Ajay Residency in Sector 84, Gurugram directly on the official website and pay at the hotel."
+    />
+    <title>Book Direct | Hotel Ajay Residency, Gurugram</title>
+    <link
+      rel="canonical"
+      href="https://www.hotelajayresidency.in/booking.html"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://www.hotelajayresidency.in/booking.html#webpage",
+        "name": "Book Hotel Ajay Residency",
+        "url": "https://www.hotelajayresidency.in/booking.html",
+        "about": {
+          "@id": "https://www.hotelajayresidency.in/#hotel"
+        },
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": "https://www.hotelajayresidency.in/booking.html",
+          "result": {
+            "@type": "LodgingReservation",
+            "name": "Hotel Ajay Residency reservation"
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="assets/booking.css" />
+  </head>
+  <body>
+    <header class="wrap top">
+      <a href="index.html">AJAY.RES</a>
+      <nav>
+        <a href="index.html">Home</a> · <a href="rooms.html">Rooms</a> ·
+        <a href="tel:+918130411881">Call hotel</a>
+      </nav>
+    </header>
+    <main class="wrap">
+      <section class="hero">
+        <p class="eyebrow">Official website · Pay at hotel</p>
+        <h1>Book your Gurugram stay.</h1>
+        <p>No online payment or card is required.</p>
+      </section>
+      <section class="card">
+        <h2>Check availability</h2>
+        <form id="availability-form" class="search">
+          <label>Check-in<input id="checkin" type="date" required /></label
+          ><label>Check-out<input id="checkout" type="date" required /></label
+          ><label
+            >Adults<input
+              id="adults"
+              type="number"
+              min="1"
+              max="6"
+              value="2"
+              required /></label
+          ><label
+            >Children<input
+              id="children"
+              type="number"
+              min="0"
+              max="4"
+              value="0"
+              required /></label
+          ><button>Search rooms</button>
+        </form>
+      </section>
+      <section class="layout">
+        <div>
+          <p class="eyebrow">Live inventory</p>
+          <h2>Available rooms</h2>
+          <div id="room-results">
+            <div class="card muted">Choose dates to check availability.</div>
+          </div>
+        </div>
+        <aside id="booking-panel" class="card booking">
+          <p class="eyebrow">Reservation details</p>
+          <h2>Guest details</h2>
+          <div id="message" hidden></div>
+          <form id="booking-form" hidden>
+            <label
+              >Room<select id="room-id" name="room_id" required></select></label
+            ><label
+              >Full name<input
+                name="guest_name"
+                autocomplete="name"
+                required
+                maxlength="100" /></label
+            ><label
+              >Email<input
+                name="guest_email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="200" /></label
+            ><label
+              >Mobile<input
+                name="guest_phone"
+                type="tel"
+                autocomplete="tel"
+                required
+                maxlength="20" /></label
+            ><label
+              >Special requests<textarea
+                name="special_requests"
+                rows="3"
+                maxlength="500"
+              ></textarea>
+            </label>
+            <div id="summary" class="summary"></div>
+            <button id="submit-booking">Reserve — Pay at Hotel</button>
+            <p class="muted">
+              The hotel may call to reconfirm arrival details.
+            </p>
+          </form>
+        </aside>
+      </section>
+    </main>
+    <footer>
+      Hotel Ajay Residency · NH-8, Kherki Daula, Gurugram, Haryana 122004 · +91
+      81304 11881
+    </footer>
+    <script src="assets/booking-config.js"></script>
+    <script src="assets/booking.js"></script>
+  </body>
+</html>
