@@ -19,8 +19,6 @@
   cout.value = params.get("checkout") || day(next);
   adults.value = params.get("adults") || 2;
   children.value = params.get("children") || 0;
-  q("booking-panel").hidden = true;
-
   cin.onchange = () => {
     const date = new Date(cin.value + "T00:00:00");
     date.setDate(date.getDate() + 1);
